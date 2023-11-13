@@ -1,0 +1,1 @@
+print("menath".lower())
