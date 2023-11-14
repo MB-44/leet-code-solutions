@@ -13,5 +13,4 @@ def singleNumber(nums):
         if nums.count(num) == 1:
             return num
      
-        # D:\python\leet code\.git\136. Single Number.py
-        #D:\python\leet code\136. Single Number.py
+        
