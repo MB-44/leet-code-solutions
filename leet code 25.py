@@ -1,9 +1,8 @@
-class Solution:
-    def permute(self, nums: list[int]):
-        numStr = ""
-        for letter in nums:
-            numStr += str(letter)
-        
+# 88. Merge Sorted Array
 
-x = Solution().permute([1,2,3])
-print(x)
+class Solution(object):
+    def merge(self,nums1, m, nums2, n):
+        for j in range(n):
+            nums1[m+j] = nums2[j]
+        nums1.sort()
+
