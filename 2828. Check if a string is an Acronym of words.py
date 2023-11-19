@@ -1,7 +1,6 @@
 # Runtime - 25ms
 # Memory = 13.44MB
 
-
 def isAcronym(words,s):
     firstLetters = ""
     for word in words:
