@@ -1,3 +1,4 @@
+# 703ms
 class Solution(object):
     def garbageCollection(self,garbage,travel):
         travel.insert(0,0)
@@ -8,7 +9,19 @@ class Solution(object):
                 if truck in garbage[house]:
                     indexOfHouse.append(house)
                     break
+        travelTIme,collectTime = 0,0
+        for index in indexOfHouse:
+            for time in travel[:index+1]:
+                travelTIme += time
         
+        for word in garbage:
+            for letter in word:
+                collectTime+=1
+
+        return travelTIme+collectTime
+
+
+
 
 
 
