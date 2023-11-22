@@ -4,7 +4,7 @@ class Solution(object):
         for height in sorted(heights, reverse=True):
             sortedPeople.append(names[heights.index(height)])
         return sortedPeople
-
+    
 
 if __name__ == "__main__":
     names = ["Mary","John","Emma"]
