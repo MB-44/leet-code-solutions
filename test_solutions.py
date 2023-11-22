@@ -5,6 +5,10 @@
 #         num = num * 10 +(ord(ch) - ord("0"))
 # print(type(num))
 
-for i in range(5):
-    for j in range(i,5):
-        print(i,j)
+words = ["one.two.three","four.five","six"]
+separator = "."
+returnStr = []
+for word in words:
+    returnStr.extend(word.split("."))
+print(returnStr)
+
