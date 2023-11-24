@@ -18,6 +18,3 @@ if __name__ == "__main__":
     s = "hello"
     result = Solution().reverseVowels(s)
     print(result)
-
-# hello = "men"
-# print(list(hello))
