@@ -1,3 +1,1 @@
-s = "bbb"
-x = len(set(s))
-print(x)
+print(chr(66))
