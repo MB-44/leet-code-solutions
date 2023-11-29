@@ -1,4 +1,2 @@
-print(ord("Y")%64)
-print(26**1)
-
-# ZY
+list = [1,2,3,4,5,6,7,8]
+print(list[:-3])
