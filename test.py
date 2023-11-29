@@ -1,2 +1,4 @@
-s = "101"
-print(int(s,2))
+print(ord("Y")%64)
+print(26**1)
+
+# ZY
