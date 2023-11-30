@@ -1,1 +1,1 @@
-print(2**2)
+print(int(3.5))
