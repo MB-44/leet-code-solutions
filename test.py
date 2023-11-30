@@ -1,3 +1,3 @@
-s = [4,5,1,2]
-s.sort()
-print(s)
+char = 'a'
+numeric_value = ord(char)%96
+print(numeric_value)
