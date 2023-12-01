@@ -1,8 +1,12 @@
 class Solution(object):
-    def createTargetArray(self,nums,index):
-        pass
-
-
+    def createTargetArray(nums,index):
+        targetArr = ["_"]*len(nums)
+        for i in range(len(targetArr)):
+            targetArr.insert(index[i],nums[index[i]])
+        return targetArr
 
 if __name__ == "__main__":
-    pass
+    nums = [0,1,2,3,4]
+    index = [0,1,2,2,1]
+    result = Solution.createTargetArray(nums,index)
+    print(result)
