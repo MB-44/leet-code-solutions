@@ -1,3 +1,1 @@
-
-# hello = "men"
-# print(list(hello))
+result = Solution.interpret(command)
