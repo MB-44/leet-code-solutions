@@ -1,10 +1,16 @@
 class Solution:
     def finalString(s: str) -> str:
-        stringList = list(s)
-        for i in range(len(stringList) - 1, -1, -1):
-            if stringList[i] == "i":
-                stringList.pop(i)
-        return "".join(stringList)
+        strList = list(s)
+        l = []
+        for i in range(len(strList)):
+            if strList[i] == "i":
+                l = strList[:i][::-1]
+            else: 
+                l.append(strList[i])
+        countI = l.count("i")
+        for i in range(countI):
+            l.remove("i")
+        return "".join(l)
 
 # Example usage
 result = Solution.finalString("mississippi")
