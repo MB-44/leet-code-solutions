@@ -1,3 +1,2 @@
-l = "poiinter"
-x = l[:3][::-1]
-print(x)
+for i in range(1,1+7):
+    print(i)
