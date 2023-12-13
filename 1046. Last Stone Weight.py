@@ -7,8 +7,11 @@ class Solution:
             max01 = max(stones)
             stones.remove(max01)
             max02 = max(stones)
+            if max01 == max02:
+                continue
             newStone = max01 - max02
             stones.append*newStone
+        return stones[0]
 
 
 
