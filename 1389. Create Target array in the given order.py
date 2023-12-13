@@ -1,9 +1,9 @@
 class Solution(object):
     def createTargetArray(nums,index):
-        targetArr = ["_"]*len(nums)
-        for i in range(len(targetArr)):
-            targetArr.insert(index[i],nums[index[i]])
-        return targetArr
+        pass
+
+
+
 
 if __name__ == "__main__":
     nums = [0,1,2,3,4]
