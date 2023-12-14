@@ -13,6 +13,8 @@ var reverse = function(x) {
         }
     }
 
+
+    
     let sign = signCheck(x);
     let sX = String(Math.abs(x));
 
