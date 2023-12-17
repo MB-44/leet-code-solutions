@@ -1,4 +1,4 @@
 class Solution:
-    def checkRecord(s: str) -> bool:
-        return list(s).count("A") < 2 or list(s).count("L") < 3
+    def checkRecord(self, s: str) -> bool:
+        return s.count("A") < 2 and ("LLL" not in s)
         
