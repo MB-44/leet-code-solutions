@@ -1,20 +1,18 @@
-# To Do
+class Solution:
+    def findWords(self, words: list[str]) -> list[str]:
+        firstRow = {"q","w","e","r","t","y","u","i","o","p"}
+        secondRow = {"a","s","d","f","g","h","j","k","l"}
+        thirdRow = {"z","x","c","v","b","n","m"}
 
-class Solution(object):
-    def findWords(self,words):
-        keyBoard = ["qwertyuiop","asdfghjkl","zxcvbnm"]
-        output = words.copy()
-        for row in keyBoard:
-            for word in words:
-                count = 0
-                for letter in word:
-                    if letter.lower() in row:
-                        count += 1
-                if len(word) == count:
-                    output.append(word)
-        return output
+        keyboard = [
+            {"q","w","e","r","t","y","u","i","o","p"},
+            {"a","s","d","f","g","h","j","k","l"},
+            {"z","x","c","v","b","n","m"}
+        ]
 
-if __name__ == "__main__":
-    words = ["Hello","Alaska","Dad","Peace"]
-    print(Solution().findWords(words))
-    
+        outputArray = []
+
+        for word in words:
+            wordSet = set(word.lower())
+            for letter in wordSet:
+                pass
