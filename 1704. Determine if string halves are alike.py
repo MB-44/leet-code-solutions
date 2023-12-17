@@ -1,7 +1,13 @@
 class Solution:
-    def minTimeToVisitAllPoints(points: list[list[int]]) -> int:
-        pass
+    def halvesAreAlike(s: str) -> bool:
+        mid = len(s)//2
+        a, b = s[:mid], s[mid:]
+        countA = [letter for letter in a if letter.lower() in "aeiou"]
+        countB = [letter for letter in b if letter.lower() in "aeiou"]
+        return len(countA) == len(countB)
 
-x = [[1,1],[3,4],[-1,0],[5,4]]
-for i in range(0,len(x),2):
-    print(x[i])
+
+if __name__ == "__main__":
+    s = "book"
+    result = Solution.halvesAreAlike(s)
+    print(result)
