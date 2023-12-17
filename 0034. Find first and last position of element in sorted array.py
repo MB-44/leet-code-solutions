@@ -1,5 +1,5 @@
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums: list[int], target: int) -> list[int]:
         startPoint, endPoint = [-1,-1]
         if nums.count(target) == 1:
             return [nums.index(target),nums.index(target)]
