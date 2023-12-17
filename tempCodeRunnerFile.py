@@ -1,1 +1,0 @@
-result = Solution.interpret(command)
