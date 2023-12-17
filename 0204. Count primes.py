@@ -17,6 +17,6 @@ class Solution:
         return count
     
     
-num = 10
+num = 5000000 
 result = Solution.countPrimes(num)
 print(result)
