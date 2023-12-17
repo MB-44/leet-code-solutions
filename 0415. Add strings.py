@@ -1,19 +1,6 @@
 class Solution:
-    def addStrings(num1,num2):
-        n1 = n2 = 0
-        for chr in num1:
-            if "0" <= chr <= "9":
-                n1 = n1 * 10 + (ord(chr)-ord("0"))
-                continue
-            break
-
-        for chr in num2:
-            if "0" <= chr <= "9":
-                n2 = n2 * 10 + (ord(chr)-ord("0"))
-                continue
-            break
-        return str(n1+n2)
-
-
-if __name__ == "__main__":
-    pass
+    def addStrings(self, num1: str, num2: str) -> str:
+        sys.set_int_max_str_digits(10000)
+        num1 = int(num1)
+        num2 = int(num2)
+        return str(num1 + num2)
