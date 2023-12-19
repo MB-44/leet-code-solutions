@@ -1,5 +1,5 @@
 class Solution:
-    def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
+    def imageSmoother(self, img: list[list[int]]) -> list[list[int]]:
 
         def get_surrounding_indices(matrix, row, col):
             sumOfSurround = 0
