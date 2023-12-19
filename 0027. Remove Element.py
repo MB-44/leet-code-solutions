@@ -1,12 +1,12 @@
-class Solution(object):
+class Solution:
     def removeElement(self,nums:list[int],val:int)->int:
-        k = 0
-        for num in nums:
-            if num == val:
-                num.remove(num)
-                continue
-            
+        if not nums:
+            return 0
 
-
-if __name__ == "__main__":
-    pass
+        #  two pointer
+        index = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[index] = nums[i]
+                index += 1
+        return index
