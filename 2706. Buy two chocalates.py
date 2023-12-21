@@ -1,5 +1,6 @@
 class Solution:
     def buyChoco(prices, money):
+        prices.sort()
         toBuy = prices[0] + prices[1]
         if toBuy > money:
             return money
@@ -11,5 +12,3 @@ if __name__ == "__main__":
     money = 3
     result = Solution.buyChoco(prices, money)
     print(result)
-        
-        
