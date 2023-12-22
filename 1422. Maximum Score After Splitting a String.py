@@ -7,7 +7,7 @@ class Solution:
             maxScore = max(maxScore, (rightSubCount + leftSubCount))
         return maxScore
 
-# s = "011101"
+# s = "01110"
 # Solution.maxScore(s)
 # result = Solution.maxScore(s)
 # print(result)
