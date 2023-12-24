@@ -1,13 +1,22 @@
 class Solution:
-    def minOperations(s: str) -> int:
-        subStr = [s[i: i+2] for i in range(0,len(s),2)]
-        unique = list(set(subStr))
+    def minOperations(self, s: str) -> int:
+        n = len(s)
+        count_if_start_0 = 0
+        count_if_start_1 = 0
 
+        for i in range(0,n):
+            if i%2==0:
+                if s[i] == '1':
+                    count_if_start_0 += 1
+                else:
+                    count_if_start_1 += 1
+            else:
+                if s[i] == '0':
+                    count_if_start_0 += 1
+                else:
+                    count_if_start_1 += 1
+        
 
-
-s = "10100"
-l = 2
-
-substr = [s[i : i+l] for i in range(0, len(s), l)]
-
-print(substr)
+        return min(count_if_start_0,count_if_start_1)
+ 
+        
