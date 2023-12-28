@@ -1,3 +1,4 @@
+# tried without using dp, but it's not correct
 class Solution:
     def getLengthOfOptimalCompression(s: str, k: int) -> int:
         numOfLetter = {}
@@ -5,7 +6,8 @@ class Solution:
         l.sort()
         for letter in l:
             numOfLetter[letter] = s.count(letter)
-        
+
+        print(numOfLetter)
         for _ in range(k):
             minLetter = min(numOfLetter, key=numOfLetter.get)
             minCount = numOfLetter[minLetter]
@@ -25,7 +27,8 @@ class Solution:
                 ans += letter
         print(len(ans))
 
+
 if __name__ == "__main__":
-    s, k = "abc", 2
+    s, k = "aaaaaaaaaaa", 0
     result = Solution.getLengthOfOptimalCompression(s,k)
     print(result)
