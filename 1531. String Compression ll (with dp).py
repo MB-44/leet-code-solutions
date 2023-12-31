@@ -1,24 +1,23 @@
 class Solution:
-    def getLengthOfOptimalCompression(s:str, k:int)->int:
+    def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         n = len(s)
-        dp = [[float('inf')] * (k + 1) for _ in range(n + 1)]
-
+        dp = [[9999] * 110 for _ in range(110)]
         dp[0][0] = 0
 
         for i in range(1, n + 1):
-            for j in range(k + 1):
+            for j in range(0, k + 1):
+                cnt, del_ = 0, 0
+                for l in range(i, 0, -1):
+                    if s[l - 1] == s[i - 1]:
+                        cnt += 1
+                    else:
+                        del_ += 1
+
+                    if j - del_ >= 0:
+                        dp[i][j] = min(dp[i][j], dp[l - 1][j - del_] + 1 + (3 if cnt >= 100 else 2 if cnt >= 10 else 1 if cnt >= 2 else 0))
+
                 if j > 0:
                     dp[i][j] = min(dp[i][j], dp[i - 1][j - 1])
 
-                dp[i][j] = min(dp[i][j], dp[i - 1][j] + 1)
+        return dp[n][k]
 
-                count, l = 0, 1
-                while l <= n and s[l - i] == s[i - 1]:
-                    l += 1
-                    count += 1
-                
-                cost = 0 if count == 1 else len(str(count))
-                dp[l][j + count] = min(dp[i][j + count], dp[i - 1][j] + cost)
-        
-        result = min(dp[n])
-        return result
