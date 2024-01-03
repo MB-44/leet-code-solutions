@@ -1,13 +1,3 @@
-# class Solution:
-#     def numberOfBeams(bank : list[str]) -> int:
-#         beams_count = 0
-#         row = 0
-#         for i in range(1,len(bank)):
-#             if "1" in bank[i]:
-#                 beams_count += (bank[i-1].count("1") * bank[i].count("1"))
-#             row = bank[i].count("1")
-#         return beams_count
-
 class Solution:
     def numberOfBeams(bank : list[str]) -> int:
         beams_count = 0
