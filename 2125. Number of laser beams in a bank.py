@@ -20,7 +20,6 @@ class Solution:
             temp = device_count
         return beams_count
 
-
 if __name__ == "__main__":
     bank = ["011001","000000","010100","001000"]
     # bank = ["000","111","000"]
