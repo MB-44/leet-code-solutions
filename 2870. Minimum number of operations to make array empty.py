@@ -10,4 +10,4 @@ class Solution:
             count += (t // 3)
             if t % 3:
                 count += 1
-        return count 
+        return count
